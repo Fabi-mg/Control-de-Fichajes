@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id('id');
-            $table->foreignId('id_usuario')->constrained('usuarios');
+            $table->foreignId('id_user')->constrained('users');
             $table->timestamp('entrada');
-            $table->dateTime('salida');
+            $table->dateTime('salida')->nullable();
         });
     }
 
